@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "Classroom": {
+      "title": "Classroom",
+      "description": "Classroom entity representing school classes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique ID of the class" },
+        "name": { "type": "string", "description": "Name of the class" },
+        "code": { "type": "string", "description": "Code of the class" },
+        "gradeLevel": { "type": "integer", "description": "Grade level" },
+        "academicYearId": { "type": "string", "description": "Academic year ID" },
+        "roomNumber": { "type": "string", "description": "Room number" },
+        "homeroomTeacherId": { "type": "string", "description": "Teacher ID" },
+        "homeroomTeacherName": { "type": "string", "description": "Teacher name" },
+        "color": { "type": "string", "description": "Badge color" },
+        "isArchived": { "type": "boolean", "description": "Archived status" },
+        "studentCount": { "type": "integer", "description": "Number of students" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" }
+      },
+      "required": ["id", "name", "gradeLevel"]
+    },
+    "Student": {
+      "title": "Student",
+      "description": "Student entity",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "classId": { "type": "string" }
+      },
+      "required": ["id", "fullName", "classId"]
+    }
+  },
+  "firestore": {
+    "/classes/{classId}": {
+      "schema": "Classroom",
+      "description": "Classes collection"
+    },
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Students collection"
+    }
+  }
+}

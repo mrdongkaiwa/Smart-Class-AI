@@ -1,0 +1,6 @@
+{
+  "name": "Smart Class - Quản Lý Lớp Học Thông Minh",
+  "description": "Nền tảng quản lý lớp học số thông minh toàn diện phục vụ Giáo viên, Học sinh, Phụ huynh và Ban giám hiệu",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
