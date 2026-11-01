@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #020f1c;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ========================================================= */
+/* THEME DARK NAVY, VIỀN CYAN, CHỮ TRẮNG, MÀU XANH TOÀN DỰ ÁN */
+/* LẤY MẪU CHUẨN TỪ TRANG THỜI KHÓA BIỂU                     */
+/* ========================================================= */
+
+/* 1. Nền thẻ card & container */
+.bg-white {
+  background-color: #041527 !important;
+}
+
+/* 2. Nền ô phụ, hàng xen kẽ, ô đệm */
+.bg-slate-50,
+.bg-slate-50\/30,
+.bg-slate-50\/40,
+.bg-slate-50\/50,
+.bg-slate-50\/60,
+.bg-slate-50\/70,
+.bg-slate-50\/80,
+.bg-slate-50\/90,
+.bg-slate-100,
+.bg-slate-100\/40,
+.bg-slate-100\/50,
+.bg-slate-100\/60,
+.bg-slate-100\/70,
+.bg-slate-100\/80,
+.bg-slate-100\/90 {
+  background-color: #03172c !important;
+}
+
+.hover\:bg-slate-50:hover,
+.hover\:bg-slate-50\/60:hover,
+.hover\:bg-slate-100:hover,
+.hover\:bg-slate-100\/70:hover,
+.hover\:bg-slate-200:hover,
+.hover\:bg-white:hover {
+  background-color: #06203a !important;
+}
+
+/* 3. Đường viền Cyan tối chuẩn Schedule Page */
+.border-slate-100,
+.border-slate-100\/80,
+.border-slate-200,
+.border-slate-200\/60,
+.border-slate-200\/70,
+.border-slate-200\/80,
+.border-slate-200\/90,
+.border-slate-300 {
+  border-color: #0e3d54 !important;
+}
+
+.divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+.divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #0e3d54 !important;
+}
+
+/* 4. Màu chữ Trắng & Muted Slate */
+.text-slate-900,
+.text-slate-800 {
+  color: #ffffff !important;
+}
+
+.text-slate-700,
+.text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+.text-slate-500,
+.text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* 5. Màu điểm nhấn Xanh dương / Cyan */
+.text-blue-600,
+.text-blue-700 {
+  color: #38bdf8 !important;
+}
+
+.border-blue-500,
+.border-blue-600 {
+  border-color: #0284c7 !important;
+}
+
+.bg-blue-50,
+.bg-blue-50\/30,
+.bg-blue-50\/50,
+.bg-blue-50\/70,
+.bg-blue-50\/80,
+.bg-blue-100 {
+  background-color: rgba(6, 182, 212, 0.12) !important;
+}
+
+.hover\:bg-blue-50:hover,
+.hover\:bg-blue-100:hover {
+  background-color: rgba(6, 182, 212, 0.22) !important;
+}
+
+/* 6. Form inputs, Selects, Textareas Dark Mode */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+  background-color: #020e1a !important;
+  border-color: #0e3d54 !important;
+  color: #ffffff !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #06b6d4 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 1px #06b6d4 !important;
+}
+
+/* 7. Bảng Headers & Hover chuẩn Dark Navy & Cyan */
+thead {
+  background-color: #051c33 !important;
+  border-bottom: 1px solid #0e3d54 !important;
+}
+
+thead th {
+  color: #38bdf8 !important;
+}
+
+/* Row & Cell Hover: Loại bỏ hoàn toàn vệt mờ trắng, thay bằng vệt sáng Cyan Navy bắt mắt, sắc nét */
+tbody tr:hover {
+  background-color: #062440 !important;
+}
+
+tbody tr:hover td {
+  background-color: transparent;
+}
+
+/* Highlight từng ô (cell) khi di chuột qua: phát sáng viền cyan mảnh, nền xanh ngọc đậm không bị lóa */
+td:hover {
+  background-color: rgba(6, 182, 212, 0.16) !important;
+  box-shadow: inset 0 0 0 1px rgba(6, 182, 212, 0.45) !important;
+}
+
+/* Neutralize legacy milky white hover utilities */
+.hover\:bg-blue-50\/30:hover,
+.hover\:bg-blue-50\/50:hover,
+.hover\:bg-blue-50\/80:hover,
+.hover\:bg-blue-50:hover,
+.hover\:bg-slate-50\/80:hover,
+.hover\:bg-slate-50\/90:hover,
+.hover\:bg-slate-100\/80:hover,
+.hover\:bg-indigo-50:hover {
+  background-color: #072a4a !important;
+}
+
+/* 8. Scrollbar Dark Navy & Cyan (Bổ sung thanh trượt ngang nổi bật, dễ kéo) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #0e3d54;
+  border-radius: 9999px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.custom-horizontal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #0284c7 #03172c;
+}
+
+.custom-horizontal-scrollbar::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+.custom-horizontal-scrollbar::-webkit-scrollbar-track {
+  background: #03172c;
+  border-radius: 9999px;
+}
+.custom-horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 9999px;
+  border: 2px solid #03172c;
+}
+.custom-horizontal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+::selection {
+  background-color: #06b6d4;
+  color: #020f1c;
+}
